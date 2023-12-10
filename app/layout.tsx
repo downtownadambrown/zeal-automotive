@@ -12,15 +12,25 @@ export const metadata: Metadata = {
 
 export function Header() {
   return (
-    <header className="fixed left-0 top-0 flex w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-2 pt-2 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+    <header className="flex flex-row fixed left-0 top-0 items-center w-full bg-white p-3">
       <Image
-        src="/zeal-automotive-logo.jpg"
+        src="/zeal-automotive-logo.png"
         alt="Zeal Automotive Logo"
         // className="dark:invert"
-        width={100}
+        width={200}
         height={24}
         priority
       />
+      <nav className="flex flex-row w-full justify-end">
+        <ul className="flex flex-row content-center">
+          <li className="m-2 text-black">MenuOption1</li>
+          <li className="m-2 text-black">MenuOption2</li>
+          <li className="m-2 text-black">MenuOption3</li>
+          <li className="m-2 text-black">MenuOption4</li>
+          <li className="m-2 text-black">MenuOption5</li>
+          <li className="m-2 text-black">MenuOption6</li>
+        </ul>
+      </nav>
     </header>
   )
 }
