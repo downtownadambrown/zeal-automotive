@@ -35,6 +35,14 @@ export function Header() {
   )
 }
 
+export function Footer() {
+  return (
+    <footer className="w-full h-16 text-black flex justify-center items-center">
+      footer content
+    </footer>
+  );
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -45,6 +53,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
