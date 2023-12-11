@@ -1,5 +1,11 @@
 import Image from 'next/image'
 
+const MainBanner = () => (
+  <div className="banner w-full flex items-center justify-center bg-gray-800">
+    Banner here
+  </div>
+)
+
 const Section = ({ alt, className, src, reverse }: { alt: string; className?: string; src: string; reverse?: boolean }) => {
   const contentImage = (
     <div className="h-full w-3/6 bg-stone-200/50 flex items-center justify-center">
@@ -38,6 +44,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between pt-16">
       <SectionContainer>
+        <MainBanner />
         <Section alt="" src="" />
         <Section alt="" src="" reverse />
         <Section alt="" src="" className="mb-8" />
