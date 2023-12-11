@@ -18,10 +18,20 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  background: white;
+}
+
+.section-container {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+  width: 100%;
+}
+
+.section {
+  height: 360px;
+  width: 95%;
 }
