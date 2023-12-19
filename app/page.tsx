@@ -1,10 +1,30 @@
+'use client'
 import Image from 'next/image'
+import banner1 from '../public/zeal-banner-1.png'
+import banner2 from '../public/zeal-banner-2.png'
+import banner3 from '../public/zeal-banner-3.png'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 
-const MainBanner = () => (
-  <div className="banner w-full flex items-center justify-center bg-gray-800">
-    Banner here
-  </div>
-)
+const MainBanner = () => {
+  const [emblaRef] = useEmblaCarousel({ duration: 40, loop: true }, [Autoplay()])
+  //  banner w-full flex items-center overflow-hidden justify-center bg-gray-800
+  return (
+    <div className="embla" ref={emblaRef}>
+      <div className="embla__container">
+        <div className='embla__slide'>
+          <Image src={banner1} alt='' className="banner-image" />
+        </div>
+        <div className='embla__slide'>
+          <Image src={banner2} alt='' className="banner-image"/>
+        </div>
+        <div className='embla__slide'>
+          <Image src={banner3} alt='' className="banner-image"/>
+        </div>
+      </div>
+    </div>
+  )
+};
 
 const Section = ({ alt, className, src, reverse }: { alt: string; className?: string; src: string; reverse?: boolean }) => {
   const contentImage = (
