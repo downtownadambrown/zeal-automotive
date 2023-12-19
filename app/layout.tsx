@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import zealLogo from '../public/zeal-automotive-logo.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +15,7 @@ export function Header(): JSX.Element {
   return (
     <header className="flex flex-row fixed left-0 top-0 items-center w-full bg-white p-3">
       <Image
-        src="/zeal-automotive-logo.png"
+        src={zealLogo}
         alt="Zeal Automotive Logo"
         // className="dark:invert"
         width={200}
