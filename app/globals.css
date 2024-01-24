@@ -63,7 +63,11 @@ body {
 }
 
 .banner-image {
-  /*width: 100%;*/
+  background-image: url("../public/zeal-banner-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 
 .social-icon {

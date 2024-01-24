@@ -4,6 +4,7 @@ import { Barlow_Semi_Condensed, Karla } from 'next/font/google'
 import './globals.css'
 import zealLogo from '../public/zeal-automotive-logo.png'
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import Link from 'next/link'
 
 const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
 const karla = Karla({ preload: false })
@@ -15,19 +16,23 @@ export const metadata: Metadata = {
 
 export function NotificationSection(): JSX.Element {
   return (
-    <div className={`flex w-full h-8 bg-blue-400 w-full items-center justify-between px-16 ${karla.className}`}>
-      <div className="flex flex-row w-100 justify-evenly text-sm">
-        <div className="flex flex-row pr-4">Call Us Today!</div>
-        <div className="flex flex-row pr-4">(770) XXX-XXXX</div>
+    <div className={`flex w-full flex-col sm:flex-col md:flex-row h-28 sm:h-28 md:h-8 bg-blue-400 w-full justify-center items-center md:items-center md:justify-between px-16 ${karla.className}`}>
+      <div className="flex flex-col sm:flex-col md:flex-row w-100 justify-evenly text-md md:text-sm">
+        <div className="flex flex-row pr-0 sm:pr-4 md:pr-4">Call Us Today!</div>
+        <div className="flex flex-row pr-0 sm:pr-4 md:pr-4">(678) 402-8224</div>
         <div className="flex flex-row">
-          <a href="mailto:info@zealautomotive.com">
-            info@zealautomotive.com
+          <a href="mailto:zealautoz@gmail.com">
+            zealautoz@gmail.com
           </a>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-evenly w-36">
-        <FaFacebookF />
-        <FaInstagram />
+      <div className="flex flex-row items-center justify-evenly w-72 md:w-36 my-1">
+        <Link href="https://www.facebook.com/ZealAutoz/">      
+          <FaFacebookF />
+        </Link>
+        <Link href="https://www.instagram.com/zeal_automotive/">
+          <FaInstagram />
+        </Link>        
         <FaYoutube />
         <FaLinkedin />
       </div>
@@ -37,7 +42,7 @@ export function NotificationSection(): JSX.Element {
 
 export function Header(): JSX.Element {
   return (
-    <header className="fixed left-0 top-0 w-full z-50">
+    <header className="fixed left-0 top-0 w-full z-50 border-b-black">
       <NotificationSection />
       <div className="flex flex-row items-center w-full bg-white p-3">
         <Image
