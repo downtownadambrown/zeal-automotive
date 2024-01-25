@@ -63,11 +63,42 @@ body {
 }
 
 .banner-image {
-  background-image: url("../public/zeal-banner-1.png");
+  background-image: url("../public/zeal-banner-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;
+}
+
+
+@media (min-width: 640px) {
+  .hmore {
+      height: 28rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hmore {
+      height: 28rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hmore {
+      height: 34rem !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hmore {
+      height: 40rem !important;
+  }
+}
+
+@media (min-width: 2000px) {
+  .hmore {
+      height: 52rem !important;
+  }
 }
 
 .social-icon {

@@ -1,9 +1,17 @@
 'use client'
 import Image from 'next/image'
 
+const FloatingContent = () => (
+  <div className="flex h-36 w-48 bg-blue-500 bg-opacity-50 justify-center self-center justify-self-end mr-12">
+    <button>Request a Quote!</button>
+  </div>
+);
+
 const MainBanner = () => {
   return (
-    <div className="banner-image flex justify-center h-96 w-full" />
+    <div className="banner-image grid h-96 hmore w-full content-center">
+      <FloatingContent />
+    </div>
   )
 };
 
@@ -45,7 +53,7 @@ const SectionContainer = ({
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between pt-24">
+    <main className="flex min-h-screen flex-col items-center justify-between pt-36 md:pt-24">
       <SectionContainer>
         <MainBanner />
         <SectionContainer>
