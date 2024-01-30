@@ -58,7 +58,7 @@ const InfoSection = () => {
           Your Local Automotive Specialist
         </div>
         <div className="text-center">
-          Located in Acworth GA, Zeal Automotive is your one-stop shop for automotive maintenance, paint protection, alignment, and performance enhancements in metro Atlanta Georgia.  We have a proven history providing quality services to the community to keep you on the road.  Our expertise combined with the best technology ensures you reliability at competitive prices.
+          Located in Acworth GA, Zeal Automotive is your one-stop shop for automotive maintenance, paint protection, alignment, and performance enhancements in metro Atlanta Georgia.  We have a proven history providing quality services to the community to keep you on the road.  Our expertise -- combined with the best technologies -- ensures you reliability at competitive prices.
         </div>
       </div>
     </div>
