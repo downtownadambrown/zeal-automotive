@@ -21,6 +21,14 @@ body {
   background: white;
 }
 
+.h-120 {
+  height: 30rem;
+}
+
+.h-144 {
+  height: 36rem;
+}
+
 .section-container {
   background: linear-gradient(
     to bottom,
@@ -34,6 +42,10 @@ body {
 .section {
   height: 360px;
   width: 95%;
+}
+
+.services-section {
+  height: 500px;
 }
 
 .embla {
@@ -70,6 +82,37 @@ body {
   background-position-y: 50%;
 }
 
+.alignment-image {
+  background-image: url("../public/zeal-content-alignment.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.performance-image {
+  background-image: url("../public/zeal-content-performance.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.maintenance-image {
+  background-image: url("../public/zeal-content-maintenance.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.ppf-image {
+  background-image: url("../public/zeal-content-ppf.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
 
 @media (min-width: 640px) {
   .hmore {
