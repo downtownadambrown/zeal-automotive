@@ -91,10 +91,10 @@ const ServicesSection = () => {
 
 const PPFSection = () => {
   return (
-    <div className="w-full flex h-120 justify-center bg-gray-300 text-black py-8">
-      <div className={`flex flex-row justify-center items-center ${barlow.className} w-2/3`}>
+    <div className="w-full flex h-120 justify-center bg-gray-300 text-black">
+      <div className={`flex flex-row justify-center items-center ${barlow.className} sm:w-full lg:w-3/4`}>
         <div className="flex ppf-image w-full h-72 mr-8" />
-        <div className="flex flex-col w-full h-72 align-middle">
+        <div className="flex flex-col w-full h-72 justify-center">
           <div className="text-2xl">OUR COMPLETE CAR PAINT PROTECTION SERVICES</div>
           <ul className="list-disc ml-8 mt-4">
             <li className="mb-2">polished the car to remove defects and superficial scratches from its finish</li>
@@ -174,8 +174,10 @@ const WhyChooseZealSection = () => {
 const CallOrEmailSection = () => {
   return (
     <div className="flex w-full h-96 justify-center bg-blue-500 text-white">
-      <div className={`flex flex-row justify-center items-center ${barlow.className} w-2/3`}>
-        a
+      <div className={`flex flex-col justify-center items-center ${barlow.className} w-2/3`}>
+        <div className="flex text-gray-800 text-4xl uppercase pb-6">Call or Email Us Today!</div>
+        <div className="flex text-white text-3xl pb-6">678-402-8224</div>
+        <button className="flex text-lg uppercase bg-gray-800 p-4">Send Us A Message</button>
       </div>
     </div>
   );
@@ -197,10 +199,3 @@ export default function Home() {
     </main>
   )
 }
-
-/*
-          <Section alt="" src={zealMaintenance} innerClassName="maintenance-image" />
-          <Section alt="" src={zealAlignment} reverse innerClassName="alignment-image" />
-          <Section alt="" src={zealPPF} innerClassName="ppf-image" />
-          <Section alt="" src={zealPerformance} reverse innerClassName="performance-image" outerClassName="mb-8" />
- */

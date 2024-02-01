@@ -1,9 +1,11 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import { Barlow_Semi_Condensed, Karla } from 'next/font/google'
-import './globals.css'
-import zealLogo from '../public/zeal-automotive-logo.png'
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { Barlow_Semi_Condensed, Karla } from 'next/font/google';
+import './globals.css';
+import zealLogo from '../public/zeal-automotive-logo.png';
+import zealLogoBlack from '../public/zeal-automotive-logo-black.png'
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+
 import Link from 'next/link'
 
 const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
@@ -68,11 +70,81 @@ export function Header(): JSX.Element {
 }
 
 export function Footer(): JSX.Element {
+  const year = new Date().getFullYear()
   return (
-    <footer className="w-full h-16 text-black flex justify-center items-center">
-      footer content
+    <footer className="footer w-full h-16 text-white flex justify-center items-center text-xs">
+      <>
+        {`© Copyright ${year} | Zeal Automotive | All Rights Reserved`}
+      </>
     </footer>
   );
+}
+
+export function BulkyFooter(): JSX.Element {
+  return (
+    <div className="flex w-full bg-gray-300 justify-center py-8">
+      <div className="flex flex-col w-1/4 items-center px-8">
+        <Image
+          src={zealLogoBlack}
+          alt="Zeal Automotive Logo"
+          width={200}
+          height={24}
+          priority
+        />
+      </div>
+      <div className="flex flex-col w-1/4 px-8">
+        <div className={`flex w-full text-xl text-gray-700 uppercase font-bold pb-8 ${barlow.className}`}>Contact Us</div>
+        <div className={`flex flex-col w-full text-md text-gray-700 ${karla.className}`}>
+          <div className="flex flex-col w-full">
+            <div>4948 Cobb Pkwy North</div>
+            <div>Acworth, GA 30101</div>
+            <div className="link"><a href="tel:6784028224">(678) 402-8224</a></div>
+            <div className="link"><a href="mailto:zealautoz@gmail.com">zealautoz@gmail.com</a></div>
+          </div>
+          <div className="flex flex-col w-full pt-4">
+            <div className="flex font-bold">Hours</div>
+            <div className="flex flex-row">
+              <div>
+                Mon—Fri:
+              </div>
+              <div className="pl-2">
+                8am-5pm
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col w-1/4 px-8">
+        <div className={`flex w-full text-xl text-gray-700 uppercase font-bold pb-8 ${barlow.className}`}>Protect your car</div>
+          <div className={`flex flex-col w-full text-md text-gray-700 ${karla.className}`}>
+            // site links
+          </div>
+        </div>
+        <div className="flex flex-col w-1/4 px-8 items-center">
+        <div className={`flex w-full justify-center text-xl text-gray-700 uppercase font-bold pb-8 ${barlow.className}`}>
+          Follow Us
+        </div>
+        <div className="link flex flex-row w-full justify-center">
+          <div className="p-4">
+            <Link href="https://www.facebook.com/ZealAutoz/">      
+              <FaFacebookF size={18} />
+            </Link>
+          </div>
+          <div className="link p-4">
+            <Link href="https://www.instagram.com/zeal_automotive/">
+              <FaInstagram size={18} />
+            </Link>
+          </div>
+          <div className="link p-4">
+            <FaYoutube size={18} />
+          </div>
+          <div className="link p-4">
+            <FaLinkedin size={18} />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function RootLayout({
@@ -85,6 +157,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <BulkyFooter />
         <Footer />
       </body>
     </html>
