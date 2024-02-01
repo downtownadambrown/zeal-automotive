@@ -1,7 +1,7 @@
 'use client'
-import { StaticImageData } from 'next/image'
 import { Barlow_Semi_Condensed } from 'next/font/google'
 import { FaCircleCheck } from "react-icons/fa6";
+import blurbs from "./blurbs";
 
 const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
 
@@ -18,25 +18,6 @@ const MainBanner = () => {
     </div>
   )
 };
-
-const Section = ({ alt, outerClassName, innerClassName, src, reverse }: { alt: string; outerClassName?: string; innerClassName?: string; src: StaticImageData | string; reverse?: boolean }) => {
-  const defaultClassName = "h-full w-3/6 bg-stone-200/50 flex items-center justify-center"
-  const contentImage = (
-    <div className={`${defaultClassName} ${innerClassName}`} />
-  )
-  const contentSection = (
-    <div className={defaultClassName}>
-      this is where some content will go
-    </div>
-  )
-  
-  return (
-    <div className={`section w-full flex flex-row w-full h-full mt-8 ${outerClassName}`}>
-      {!!reverse ? contentImage : contentSection}
-      {!!reverse ? contentSection : contentImage}
-    </div>
-  )
-}
 
 const SectionContainer = ({
   children,
@@ -66,12 +47,12 @@ const InfoSection = () => {
 }
 
 const ServiceBox = ({ className, text, subtext }: { className: string; text: string; subtext: string; }) => (
-  <div className="flex flex-col mx-8 w-full">
-    <div className={`mb-4 h-64 ${className}`} />
+  <div className="flex flex-col mx-8 w-full h-full py-8">
+    <div className={`mb-4 h-full ${className}`} />
     <div className="text-center text-2xl uppercase">
       {text}
     </div>
-    <div className="text-center text-md">
+    <div className="text-center text-md whitespace-nowrap">
       {subtext}
     </div>
   </div>
@@ -80,7 +61,7 @@ const ServiceBox = ({ className, text, subtext }: { className: string; text: str
 const ServicesSection = () => {
   return (
     <div className="w-full flex h-96 bg-zinc-600 justify-center">
-      <div className={`flex flex-row justify-center items-center ${barlow.className} w-2/3`}>
+      <div className={`flex flex-col md:flex-row h-full sm:w-full md:w-3/4 justify-center items-center ${barlow.className}`}>
         <ServiceBox className="maintenance-image" text="Maintenance" subtext="All Makes and Models" />
         <ServiceBox className="alignment-image" text="Wheel Alignment" subtext="In-house state of the art equipment" />
         <ServiceBox className="performance-image" text="Performance" subtext="Upgrade your vehicle" />
@@ -110,62 +91,49 @@ const PPFSection = () => {
 }
 
 const WhyChooseZealSection = () => {
+
+
+  const WhyZealBlurb = ({ title, description }: { title: string; description: string;}): JSX.Element => (
+    <div className="flex w-full h-full p-4">
+    <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="grey" size={24} /></div>
+    <div className="w-3/4 flex flex-col">
+      <div className="flex w-full text-2xl uppercase">{title}</div>
+      <div className="flex w-full">{description}</div>
+    </div>
+  </div>
+  )
+
+  const BlurbRow = ({ children }: { children: React.ReactNode; }): JSX.Element => (
+    <div className="flex w-full flex-col">
+      <div className="flex flex-row w-full">
+        {children}
+      </div>
+    </div>
+  )
+
   return (
     <div className="flex w-full justify-center bg-white text-black p-6">
       <div className={`flex flex-col justify-center items-center ${barlow.className} w-3/4`}>
         <div className="flex w-full justify-center text-3xl uppercase mb-6">
           Why Choose Zeal Automotive?
         </div>
-        <div className="flex w-full flex-col">
-          <div className="flex flex-row w-full">
-            <div className="flex w-full h-full p-4">
-              <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="lightblue" size={24} /></div>
-              <div className="w-3/4 flex flex-col">
-                <div className="flex w-full text-2xl uppercase">Experienced</div>
-                <div className="flex w-full">Experience is what sets us apart. Zeal Automotive has been providing premier paint protection services for over 8 years, using nothing but the best products and procedures.</div>
-              </div>
-            </div>
-            <div className="flex w-full h-full p-4">
-              <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="lightblue" size={24} /></div>
-              <div className="w-3/4 flex flex-col">
-                <div className="flex w-full text-2xl uppercase">Experienced</div>
-                <div className="flex w-full">Experience is what sets us apart. Zeal Automotive has been providing premier paint protection services for over 8 years, using nothing but the best products and procedures.</div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-row w-full">
-          <div className="flex w-full h-full p-4">
-            <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="lightblue" size={24} /></div>
-              <div className="w-3/4 flex flex-col">
-                <div className="flex w-full text-2xl uppercase">Experienced</div>
-                <div className="flex w-full">Experience is what sets us apart. Zeal Automotive has been providing premier paint protection services for over 8 years, using nothing but the best products and procedures.</div>
-              </div>
-            </div>
-            <div className="flex w-full h-full p-4">
-              <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="lightblue" size={24} /></div>
-              <div className="w-3/4 flex flex-col">
-                <div className="flex w-full text-2xl uppercase">Experienced</div>
-                <div className="flex w-full">Experience is what sets us apart. Zeal Automotive has been providing premier paint protection services for over 8 years, using nothing but the best products and procedures.</div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-row w-full">
-          <div className="flex w-full h-full p-4">
-            <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="lightblue" size={24} /></div>
-              <div className="w-3/4 flex flex-col">
-                <div className="flex w-full text-2xl uppercase">Experienced</div>
-                <div className="flex w-full">Experience is what sets us apart. Zeal Automotive has been providing premier paint protection services for over 8 years, using nothing but the best products and procedures.</div>
-              </div>
-            </div>
-            <div className="flex w-full h-full p-4">
-              <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="lightblue" size={24} /></div>
-              <div className="w-3/4 flex flex-col">
-                <div className="flex w-full text-2xl uppercase">Experienced</div>
-                <div className="flex w-full">Experience is what sets us apart. Zeal Automotive has been providing premier paint protection services for over 8 years, using nothing but the best products and procedures.</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {blurbs.map((blurb, index) => {
+          if (index % 2 == 0) {
+            const nextBlurb = blurbs[index + 1];
+            return (
+              <BlurbRow key={index}>
+                <WhyZealBlurb
+                  title={blurb.title}
+                  description={blurb.description}
+                />
+                <WhyZealBlurb
+                  title={nextBlurb.title}
+                  description={nextBlurb.description}
+                />
+              </BlurbRow>
+            )
+          }
+        })}
       </div>
     </div>
   );
