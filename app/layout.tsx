@@ -117,7 +117,7 @@ export function BulkyFooter(): JSX.Element {
       <div className="flex flex-col w-1/4 px-8">
         <div className={`flex w-full text-xl text-gray-700 uppercase font-bold pb-8 ${barlow.className}`}>Protect your car</div>
           <div className={`flex flex-col w-full text-md text-gray-700 ${karla.className}`}>
-            // site links
+            - site links
           </div>
         </div>
         <div className="flex flex-col w-1/4 px-8 items-center">
