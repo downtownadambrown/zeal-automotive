@@ -57,11 +57,31 @@ export function Header(): JSX.Element {
         />
         <nav className={`flex flex-row w-full justify-end ${barlow.className}`}>
           <ul className="animated-list flex flex-row content-center">
-            <li className="mx-4 text-black">Home</li>
-            <li className="mx-4 text-black">Services</li>
-            <li className="mx-4 text-black">About</li>
-            <li className="mx-4 text-black">Projects</li>
-            <li className="mx-4 text-black">Contact</li>
+            <li className="mx-4 text-black">
+              <Link href="/">
+                Home
+              </Link>
+            </li>
+            <li className="mx-4 text-black">
+              <Link href="/services">
+                Services
+              </Link>
+            </li>
+            <li className="mx-4 text-black">
+              <Link href="/about">
+                About
+              </Link>
+            </li>
+            <li className="mx-4 text-black">
+              <Link href="/projects">
+                Projects
+              </Link>
+            </li>
+            <li className="mx-4 text-black">
+              <Link href="/contact">
+                Contact
+              </Link>            
+            </li>
           </ul>
         </nav>
       </div>
@@ -124,22 +144,22 @@ export function BulkyFooter(): JSX.Element {
         <div className={`flex w-full justify-center text-xl text-gray-700 uppercase font-bold pb-8 ${barlow.className}`}>
           Follow Us
         </div>
-        <div className="link flex flex-row w-full justify-center">
-          <div className="p-4">
+        <div className="flex flex-row w-full justify-center">
+          <div className="link p-4">
             <Link href="https://www.facebook.com/ZealAutoz/">      
-              <FaFacebookF size={18} />
+              <FaFacebookF size={24} />
             </Link>
           </div>
           <div className="link p-4">
             <Link href="https://www.instagram.com/zeal_automotive/">
-              <FaInstagram size={18} />
+              <FaInstagram size={24} />
             </Link>
           </div>
           <div className="link p-4">
-            <FaYoutube size={18} />
+            <FaYoutube size={24} />
           </div>
           <div className="link p-4">
-            <FaLinkedin size={18} />
+            <FaLinkedin size={24} />
           </div>
         </div>
       </div>
@@ -148,15 +168,22 @@ export function BulkyFooter(): JSX.Element {
 }
 
 export default function RootLayout({
+  modal,
   children,
 }: {
-  children: React.ReactNode
+  modal: React.ReactNode,
+  children: React.ReactNode,
 }) {
   return (
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <main>
+          <article>
+            {children}
+            {modal}
+          </article>
+        </main>
         <BulkyFooter />
         <Footer />
       </body>

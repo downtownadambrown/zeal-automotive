@@ -1,4 +1,5 @@
 'use client'
+import Link from "next/link"
 import { Barlow_Semi_Condensed } from 'next/font/google'
 import { FaCircleCheck } from "react-icons/fa6";
 import blurbs from "./blurbs";
@@ -145,7 +146,11 @@ const CallOrEmailSection = () => {
       <div className={`flex flex-col justify-center items-center ${barlow.className} w-2/3`}>
         <div className="flex text-gray-800 text-4xl uppercase pb-6">Call or Email Us Today!</div>
         <div className="flex text-white text-3xl pb-6">678-402-8224</div>
-        <button className="flex text-lg uppercase bg-gray-800 p-4">Send Us A Message</button>
+        <button className="flex text-lg uppercase bg-gray-800 p-4">
+          <Link className="h-fit" href="/contact">
+            Send Us A Message
+          </Link>
+        </button>
       </div>
     </div>
   );
