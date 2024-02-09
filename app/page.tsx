@@ -75,7 +75,7 @@ const PPFSection = () => {
   return (
     <div className="w-full flex h-120 justify-center bg-gray-300 text-black">
       <div className={`flex flex-row justify-center items-center ${barlow.className} sm:w-full lg:w-3/4`}>
-        <div className="flex ppf-image w-full h-72 mr-8" />
+        <div className="flex ppf-image w-full mr-8 h-108" />
         <div className="flex flex-col w-full h-72 justify-center">
           <div className="text-2xl">OUR COMPLETE CAR PAINT PROTECTION SERVICES</div>
           <ul className="list-disc ml-8 mt-4">

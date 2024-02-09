@@ -26,9 +26,16 @@ body {
   font-weight: 500;
 }
 
-.link:hover {
-  font-weight: 800;
+.hover-black {
+  font-weight: 500;
+}
+
+.hover-black:hover {
   color: black;
+}
+
+.h-108 {
+  height: 27rem;
 }
 
 .h-120 {

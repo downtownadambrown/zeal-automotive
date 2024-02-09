@@ -7,6 +7,7 @@ import zealLogoBlack from '../public/zeal-automotive-logo-black.png'
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 
 import Link from 'next/link'
+import LinkedListItem from './components/LinkedListItem';
 
 const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
 const karla = Karla({ preload: false })
@@ -29,14 +30,18 @@ export function NotificationSection(): JSX.Element {
         </div>
       </div>
       <div className="flex flex-row items-center justify-evenly w-72 md:w-36 my-1">
-        <Link href="https://www.facebook.com/ZealAutoz/">      
+        <Link className="hover-black" href="https://www.facebook.com/ZealAutoz/">      
           <FaFacebookF />
         </Link>
-        <Link href="https://www.instagram.com/zeal_automotive/">
+        <Link className="hover-black" href="https://www.instagram.com/zeal_automotive/">
           <FaInstagram />
+        </Link>
+        <Link className="hover-black" href="#">
+          <FaYoutube />
+        </Link>
+        <Link className="hover-black" href="#">
+          <FaLinkedin />
         </Link>        
-        <FaYoutube />
-        <FaLinkedin />
       </div>
     </div>
   )
@@ -118,8 +123,8 @@ export function BulkyFooter(): JSX.Element {
           <div className="flex flex-col w-full">
             <div>4948 Cobb Pkwy North</div>
             <div>Acworth, GA 30101</div>
-            <div className="link"><a href="tel:6784028224">(678) 402-8224</a></div>
-            <div className="link"><a href="mailto:zealautoz@gmail.com">zealautoz@gmail.com</a></div>
+            <a className="link hover-black" href="tel:6784028224">(678) 402-8224</a>
+            <a className="link hover-black" href="mailto:zealautoz@gmail.com">zealautoz@gmail.com</a>
           </div>
           <div className="flex flex-col w-full pt-4">
             <div className="flex font-bold">Hours</div>
@@ -128,37 +133,56 @@ export function BulkyFooter(): JSX.Element {
                 Mon—Fri:
               </div>
               <div className="pl-2">
-                8am-5pm
+                8am—5pm
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col w-1/4 px-8">
-        <div className={`flex w-full text-xl text-gray-700 uppercase font-bold pb-8 ${barlow.className}`}>Protect your car</div>
+        <div className="pb-8">
+          <div className={`flex w-full text-xl text-gray-700 uppercase font-bold ${barlow.className}`}>
+            Service your car
+          </div>
           <div className={`flex flex-col w-full text-md text-gray-700 ${karla.className}`}>
-            - site links
+            <ul>
+              <LinkedListItem href="/services#maintenance" text="— Maintenance"/>
+              <LinkedListItem href="/services#alignment" text="— Alignment"/>
+              <LinkedListItem href="/services#performance" text="— Performance Upgrades"/>
+            </ul>
           </div>
         </div>
-        <div className="flex flex-col w-1/4 px-8 items-center">
+        <div className="">
+          <div className={`flex w-full text-xl text-gray-700 uppercase font-bold ${barlow.className}`}>
+            Protect your car
+          </div>
+          <div className={`flex flex-col w-full text-md text-gray-700 ${karla.className}`}>
+            <ul>
+              <LinkedListItem href="/services#ppf" text="— Paint Protection Film"/>
+              <LinkedListItem href="/services#paintcorrection" text="— Paint Correction Services"/>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col w-1/4 px-8 items-center">
         <div className={`flex w-full justify-center text-xl text-gray-700 uppercase font-bold pb-8 ${barlow.className}`}>
           Follow Us
         </div>
         <div className="flex flex-row w-full justify-center">
-          <div className="link p-4">
+          <div className="link hover-black p-4">
             <Link href="https://www.facebook.com/ZealAutoz/">      
               <FaFacebookF size={24} />
             </Link>
           </div>
-          <div className="link p-4">
+          <div className="link hover-black p-4">
             <Link href="https://www.instagram.com/zeal_automotive/">
               <FaInstagram size={24} />
             </Link>
           </div>
-          <div className="link p-4">
+          <div className="link hover-black p-4">
             <FaYoutube size={24} />
           </div>
-          <div className="link p-4">
+          <div className="link hover-black p-4">
             <FaLinkedin size={24} />
           </div>
         </div>
