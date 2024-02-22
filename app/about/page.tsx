@@ -8,7 +8,6 @@ const karla = Karla({ preload: false })
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
-  console.log("key is ", process.env.GMAPS_KEY)
   return (
     <main className="flex flex-col min-h-screen items-center pt-36 md:pt-24">
         <div className="contact-banner-image flex h-96 w-full content-center"/>
