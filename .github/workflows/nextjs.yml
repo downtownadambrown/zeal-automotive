@@ -12,10 +12,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-env:
-  NEXT_PUBLIC_GMAPS_KEY: ${{ secrets.NEXT_PUBLIC_GMAPS_KEY }}
-  NEXT_PUBLIC_RESEND_KEY: ${{ secrets.NEXT_PUBLIC_RESEND_KEY }}
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -57,14 +53,11 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Load .env file
-        uses: natterstefan/action-next-env@v1
-        with:
-          path: ./.env.local
-          environment: development
-      - name: Some other action
+      - name: Create .env file from GH secrets
         run: |
-          echo "HELLO Variable: ${{ env.NEXT_PUBLIC_GMAPS_KEY }}"
+          touch .env.local
+          echo NEXT_PUBLIC_GMAPS_KEY=${{ secrets.NEXT_PUBLIC_GMAPS_KEY }} >> .env.local
+          echo NEXT_PUBLIC_RESEND_KEY=${{ secrets.NEXT_PUBLIC_RESEND_KEY }} >> .env.local
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
@@ -85,19 +78,8 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Use variables
-        run: |
-          echo "checking env vars"
-          echo "NEXT_PUBLIC_GMAPS_KEY: $NEXT_PUBLIC_GMAPS_KEY"
-          echo "NEXT_PUBLIC_RESEND_KEY: $NEXT_PUBLIC_RESEND_KEY"
-        env:
-          NEXT_PUBLIC_GMAPS_KEY: ${{ secrets.NEXT_PUBLIC_GMAPS_KEY }}
-          NEXT_PUBLIC_RESEND_KEY: ${{ secrets.NEXT_PUBLIC_RESEND_KEY }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-        env:
-          NEXT_PUBLIC_GMAPS_KEY: ${{ secrets.NEXT_PUBLIC_GMAPS_KEY }}
-          NEXT_PUBLIC_RESEND_KEY: ${{ secrets.NEXT_PUBLIC_RESEND_KEY }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
