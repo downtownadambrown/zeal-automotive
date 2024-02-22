@@ -87,13 +87,13 @@ jobs:
           echo "NEXT_PUBLIC_GMAPS_KEY: $NEXT_PUBLIC_GMAPS_KEY"
           echo "NEXT_PUBLIC_RESEND_KEY: $NEXT_PUBLIC_RESEND_KEY"
         env:
-          NEXT_PUBLIC_GMAPS_KEY: ${{ vars.NEXT_PUBLIC_GMAPS_KEY }}
-          NEXT_PUBLIC_RESEND_KEY: ${{ vars.NEXT_PUBLIC_RESEND_KEY }}
+          NEXT_PUBLIC_GMAPS_KEY: ${{ env.NEXT_PUBLIC_GMAPS_KEY }}
+          NEXT_PUBLIC_RESEND_KEY: ${{ env.NEXT_PUBLIC_RESEND_KEY }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          NEXT_PUBLIC_GMAPS_KEY: ${{ vars.NEXT_PUBLIC_GMAPS_KEY }}
-          NEXT_PUBLIC_RESEND_KEY: ${{ vars.NEXT_PUBLIC_RESEND_KEY }}
+          NEXT_PUBLIC_GMAPS_KEY: ${{ env.NEXT_PUBLIC_GMAPS_KEY }}
+          NEXT_PUBLIC_RESEND_KEY: ${{ env.NEXT_PUBLIC_RESEND_KEY }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
