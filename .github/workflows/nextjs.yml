@@ -58,6 +58,8 @@ jobs:
           touch .env.local
           echo NEXT_PUBLIC_GMAPS_KEY=${{ secrets.NEXT_PUBLIC_GMAPS_KEY }} >> .env.local
           echo NEXT_PUBLIC_RESEND_KEY=${{ secrets.NEXT_PUBLIC_RESEND_KEY }} >> .env.local
+          echo "Success"
+          cat .env.local 
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
