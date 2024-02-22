@@ -8,6 +8,7 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa"
 
 import Link from 'next/link'
 import LinkedListItem from './components/LinkedListItem';
+import Modal from './components/Modal';
 
 const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
 const karla = Karla({ preload: false })
@@ -77,11 +78,11 @@ export function Header(): JSX.Element {
                 About
               </Link>
             </li>
-            <li className="mx-4 text-black">
+            {/*<li className="mx-4 text-black">
               <Link href="/projects">
                 Projects
               </Link>
-            </li>
+            </li>*/}
             <li className="mx-4 text-black">
               <Link href="/contact">
                 Contact
@@ -192,24 +193,18 @@ export function BulkyFooter(): JSX.Element {
 }
 
 export default function RootLayout({
-  modal,
   children,
 }: {
-  modal: React.ReactNode,
   children: React.ReactNode,
 }) {
   return (
     <html lang="en">
       <body>
         <Header />
-        <main>
-          <article>
-            {children}
-            {modal}
-          </article>
-        </main>
+        {children}
         <BulkyFooter />
         <Footer />
+        <Modal />
       </body>
     </html>
   )

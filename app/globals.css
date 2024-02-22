@@ -26,12 +26,38 @@ body {
   font-weight: 500;
 }
 
+.white-link {
+  color: white;
+  font-weight: 500;
+}
+
 .hover-black {
   font-weight: 500;
 }
 
 .hover-black:hover {
   color: black;
+}
+
+.submit-button {
+  color: white;
+  background-image: linear-gradient(to right, rgb(59, 142, 222) 0%, #85abfd 51%, #bebeda 100%);
+  background-size: 200% auto;
+}
+
+.submit-button:hover {
+  background-position: right center;
+  color: black
+}
+
+input {
+  background-color: #f4f4f4;
+  border: 1px solid #d2d2d2;
+}
+
+textarea {
+  background-color: #f4f4f4;
+  border: 1px solid #d2d2d2;
 }
 
 .h-108 {
@@ -95,8 +121,21 @@ body {
   justify-content: center;
 }
 
+div.gm-style > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(3) > div > div > div {
+  padding-bottom: 50px;
+  font-weight: 700;
+}
+
 .banner-image {
   background-image: url("../public/zeal-banner-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.contact-banner-image {
+  background-image: url("../public/zeal-banner-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
@@ -144,6 +183,13 @@ body {
 @media (min-width: 768px) {
   .hmore {
       height: 28rem !important;
+  }
+  .contact-banner-image {
+    background-image: url("../public/zeal-banner-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 80%;
   }
 }
 

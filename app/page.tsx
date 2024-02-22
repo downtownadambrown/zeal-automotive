@@ -147,7 +147,7 @@ const CallOrEmailSection = () => {
         <div className="flex text-gray-800 text-4xl uppercase pb-6">Call or Email Us Today!</div>
         <div className="flex text-white text-3xl pb-6">678-402-8224</div>
         <button className="flex text-lg uppercase bg-gray-800 p-4">
-          <Link className="h-fit" href="/contact">
+          <Link className="h-fit" href="?modal=true" scroll={false}>
             Send Us A Message
           </Link>
         </button>
