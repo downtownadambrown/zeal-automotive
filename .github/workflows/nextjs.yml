@@ -12,6 +12,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  NEXT_PUBLIC_GMAPS_KEY: ${{ secrets.NEXT_PUBLIC_GMAPS_KEY }}
+  NEXT_PUBLIC_RESEND_KEY: ${{ secrets.NEXT_PUBLIC_RESEND_KEY }}
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -87,13 +91,13 @@ jobs:
           echo "NEXT_PUBLIC_GMAPS_KEY: $NEXT_PUBLIC_GMAPS_KEY"
           echo "NEXT_PUBLIC_RESEND_KEY: $NEXT_PUBLIC_RESEND_KEY"
         env:
-          NEXT_PUBLIC_GMAPS_KEY: ${{ env.NEXT_PUBLIC_GMAPS_KEY }}
-          NEXT_PUBLIC_RESEND_KEY: ${{ env.NEXT_PUBLIC_RESEND_KEY }}
+          NEXT_PUBLIC_GMAPS_KEY: ${{ secrets.NEXT_PUBLIC_GMAPS_KEY }}
+          NEXT_PUBLIC_RESEND_KEY: ${{ secrets.NEXT_PUBLIC_RESEND_KEY }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          NEXT_PUBLIC_GMAPS_KEY: ${{ env.NEXT_PUBLIC_GMAPS_KEY }}
-          NEXT_PUBLIC_RESEND_KEY: ${{ env.NEXT_PUBLIC_RESEND_KEY }}
+          NEXT_PUBLIC_GMAPS_KEY: ${{ secrets.NEXT_PUBLIC_GMAPS_KEY }}
+          NEXT_PUBLIC_RESEND_KEY: ${{ secrets.NEXT_PUBLIC_RESEND_KEY }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
