@@ -77,7 +77,7 @@ const PPFSection = () => {
       <div className={`flex flex-row justify-center items-center ${barlow.className} sm:w-full lg:w-3/4`}>
         <div className="flex ppf-image w-full mr-8 h-108" />
         <div className="flex flex-col w-full h-72 justify-center">
-          <div className="text-2xl">OUR COMPLETE CAR PAINT PROTECTION SERVICES</div>
+          <div className="text-2xl uppercase">Our Complete Paint Protection Services</div>
           <ul className="list-disc ml-8 mt-4">
             <li className="mb-2">polished the car to remove defects and superficial scratches from its finish</li>
             <li className="mb-2">ceramic coating was applied to both the wheels and calipers</li>
@@ -92,8 +92,6 @@ const PPFSection = () => {
 }
 
 const WhyChooseZealSection = () => {
-
-
   const WhyZealBlurb = ({ title, description }: { title: string; description: string;}): JSX.Element => (
     <div className="flex w-full h-full p-4">
     <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="grey" size={24} /></div>
