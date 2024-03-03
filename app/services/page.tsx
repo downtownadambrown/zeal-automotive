@@ -87,7 +87,7 @@ const GetAQuote = () => (
 )
 
 const CeramicCoatingService = () => (
-  <div id="ceramic" className="w-full flex bg-gray-300 text-black justify-center" id="maintenance">
+  <div id="ceramic" className="w-full flex bg-gray-300 text-black justify-center">
   <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
     <div className="ceramic-corvette-image h-96 md:h-72 w-full md:w-1/2" />
     <div className="flex flex-col w-full md:w-1/2 items-center py-8">
