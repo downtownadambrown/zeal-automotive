@@ -120,7 +120,7 @@ const CeramicCoatingService = () => (
 );
 
 const PPFService = () => (
-  <div id="ppf" className="w-full flex bg-white text-black justify-center" id="alignment">
+  <div id="ppf" className="w-full flex bg-white text-black justify-center">
     <div className={`flex flex-col-reverse md:flex-row justify-center items-center ${barlow.className} w-full`}>
       <div className="flex flex-col w-full md:w-1/2 md:h-full items-center py-8">
         <div className="text-2xl uppercase pb-8">
@@ -143,7 +143,7 @@ const PPFService = () => (
 );
 
 const PerformanceService = () => (
-  <div id="performance" className="w-full flex bg-gray-300 text-black justify-center" id="maintenance">
+  <div id="performance" className="w-full flex bg-gray-300 text-black justify-center">
     <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
       <div className="performance-image h-96 md:h-72 w-full md:w-1/2" />
       <div className="flex flex-col w-full md:w-1/2 items-center py-8">
