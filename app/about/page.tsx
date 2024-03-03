@@ -10,7 +10,7 @@ interface pageProps {}
 const page: FC<pageProps> = ({}) => {
   return (
     <main className="flex flex-col min-h-screen items-center pt-36 md:pt-24">
-        <div className="contact-banner-image flex h-96 w-full content-center"/>
+        <div className="about-banner-image flex h-120 w-full content-center"/>
         <AboutInfoSection />
         <Map />
     </main>

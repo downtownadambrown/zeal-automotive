@@ -74,17 +74,13 @@ const ServicesSection = () => {
 const PPFSection = () => {
   return (
     <div className="w-full flex h-120 justify-center bg-gray-300 text-black">
-      <div className={`flex flex-row justify-center items-center ${barlow.className} sm:w-full lg:w-3/4`}>
-        <div className="flex ppf-image w-full mr-8 h-108" />
-        <div className="flex flex-col w-full h-72 justify-center">
-          <div className="text-2xl uppercase">Our Complete Paint Protection Services</div>
-          <ul className="list-disc ml-8 mt-4">
-            <li className="mb-2">polished the car to remove defects and superficial scratches from its finish</li>
-            <li className="mb-2">ceramic coating was applied to both the wheels and calipers</li>
-            <li className="mb-2">the hood, front bumper, fenders, and rocker panels were wrapped with YOUR BRAND paint protection film PPF (Clear Bra)</li>
-            <li className="mb-2">the headlights were wrapped in YOUR BRAND</li>
-            <li className="mb-2">the remaining paintwork and exterior glass (without PPF) received our ?? coating service.</li>
-          </ul>
+      <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
+        <div className="flex ppf-image w-full md:mr-8 h-full" />
+        <div className="flex flex-col w-full h-72 justify-center ml-8 md:m-0 items-center md:items-start">
+          <div className="text-2xl uppercase mb-4">Our Complete Paint Protection Services</div>
+          <p className="mb-4">Transform your vehicle with our premier detailing and paint protection services.</p>
+          <p className="">With an unprecedented level of care, our experienced technicians provide high-quality service to enhance your car&apos;s appearance inside and out. Our tailored services include <span className="font-bold">paint protection film, ceramic coatings, paint correction, and restoration details</span> to ensure a meticulous finish. Trust our expertise combined with our specialized equipment to deliver the ultimate aesthetic upgrade your vehicle deserves
+          </p>
         </div>
       </div>
     </div>

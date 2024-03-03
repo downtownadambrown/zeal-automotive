@@ -4,6 +4,7 @@ import { Barlow_Semi_Condensed, Karla } from 'next/font/google';
 import './globals.css';
 import zealLogo from '../public/zeal-automotive-logo.png';
 import zealLogoBlack from '../public/zeal-automotive-logo-black.png'
+import suntekLogo from '../public/suntek-logo.png'
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 
 import Link from 'next/link'
@@ -113,6 +114,13 @@ export function BulkyFooter(): JSX.Element {
         <Image
           src={zealLogoBlack}
           alt="Zeal Automotive Logo"
+          width={200}
+          height={24}
+          priority
+        />
+        <Image
+          src={suntekLogo}
+          alt="SunTek Logo"
           width={200}
           height={24}
           priority

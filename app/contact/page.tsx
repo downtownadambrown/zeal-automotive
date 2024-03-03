@@ -38,7 +38,7 @@ interface pageProps {}
 const page: FC<pageProps> = ({}) => {
   return (
     <div className={`flex flex-col text-black ${barlow.className}`}>
-      <div className="contact-banner-image flex h-96 w-full content-center"/>
+      <div className="contact-banner-image flex h-120 w-full content-center"/>
       <BlueContactSection />
       <ContactForm />
     </div>

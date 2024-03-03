@@ -86,6 +86,95 @@ const GetAQuote = () => (
   </div>
 )
 
+const CeramicCoatingService = () => (
+  <div id="ceramic" className="w-full flex bg-gray-300 text-black justify-center" id="maintenance">
+  <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
+    <div className="ceramic-corvette-image h-96 md:h-72 w-full md:w-1/2" />
+    <div className="flex flex-col w-full md:w-1/2 items-center py-8">
+      <div className="text-2xl uppercase pb-8">
+        Ceramic Coating
+      </div>
+      <div className="flex flex-row w-full justify-center">
+        <div className="pr-8">
+          <ul>
+            <li className="pb-2">—Oil Changes</li>
+            <li className="pb-2">—Tire Rotations</li>
+            <li className="pb-2">—Brakes</li>
+            <li className="pb-2">—Emissions Systems</li>
+            <li className="pb-2">—Air Conditioning and Heat</li>
+          </ul>
+        </div>
+        <div className="">
+          <ul>
+            <li className="pb-2">—Transmissions</li>
+            <li className="pb-2">—Engine Repair and Rebuilding</li>
+            <li className="pb-2">—Cooling Systems</li>
+            <li className="pb-2">—Electrical</li>
+            <li className="pb-2">—Interior Repair</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+);
+
+const PPFService = () => (
+  <div id="ppf" className="w-full flex bg-white text-black justify-center" id="alignment">
+    <div className={`flex flex-col-reverse md:flex-row justify-center items-center ${barlow.className} w-full`}>
+      <div className="flex flex-col w-full md:w-1/2 md:h-full items-center py-8">
+        <div className="text-2xl uppercase pb-8">
+          Paint Protection Film
+        </div>
+        <div className="flex flex-row w-full justify-center">
+          <div className="">
+            <ul>
+              <li className="pb-2">—In-house digital alignment technology</li>
+              <li className="pb-2">—Excellent turnaround time</li>
+              <li className="pb-2">—Specialized technicians</li>
+              <li className="">—Best in the industry</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="ppf-image h-72 w-full md:w-1/2" />
+    </div>
+  </div>
+);
+
+const PerformanceService = () => (
+  <div id="performance" className="w-full flex bg-gray-300 text-black justify-center" id="maintenance">
+    <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
+      <div className="performance-image h-96 md:h-72 w-full md:w-1/2" />
+      <div className="flex flex-col w-full md:w-1/2 items-center py-8">
+        <div className="text-2xl uppercase pb-8">
+          Performance Modifications
+        </div>
+        <div className="flex flex-row w-full justify-center">
+          <div className="pr-8">
+            <ul>
+              <li className="pb-2">—Exhaust Mufflers</li>
+              <li className="pb-2">—Headers</li>
+              <li className="pb-2">—High-flow Intakes</li>
+              <li className="pb-2">—Fuel Systems</li>
+              <li className="pb-2">—Track Suspension</li>
+            </ul>
+          </div>
+          <div className="">
+            <ul>
+              <li className="pb-2">—Transmission Upgrades</li>
+              <li className="pb-2">—Supercharger Kits</li>
+              <li className="pb-2">—Turbocharger Kits</li>
+              <li className="pb-2">—Custom Fabrication</li>
+              <li className="pb-2">—ECU Tuning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
@@ -94,8 +183,11 @@ const page: FC<pageProps> = ({}) => {
       <div className="services-banner-image flex h-96 w-full content-center"/>
       <OurServices />
       <MaintenanceService />
-      <GetAQuote />
       <AlignmentService />
+      <CeramicCoatingService />
+      <PPFService />
+      <PerformanceService />
+      <GetAQuote />
     </div>
   )
 }
