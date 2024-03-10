@@ -1,9 +1,16 @@
 import { FC } from "react"
 import { Barlow_Semi_Condensed, Karla } from 'next/font/google';
 import Link from "next/link"
+import type { Metadata } from 'next';
 
 const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
 const karla = Karla({ preload: false })
+
+export const metadata: Metadata = {
+  title: 'Professional Automotive Maintenance & Upgrades | Zeal Automotive | Acworth, GA',
+  description: 'Zeal Automotive offers expert maintenance services, alignments, ceramic coating, paint protection film, and performance modifications. Enhance your vehicle\'s performance and appearance with our skilled technicians.',
+  keywords: 'automotive maintenance, alignments, ceramic coating, paint protection film, performance modifications, Zeal Automotive, car services, vehicle upgrades',
+}
 
 const OurServices = () => (
   <div className="w-full flex bg-white text-black justify-center py-8">

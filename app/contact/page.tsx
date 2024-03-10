@@ -1,6 +1,13 @@
+import { Metadata } from "next";
 import { FC } from "react"
 import { Barlow_Semi_Condensed, Karla } from 'next/font/google';
 import ContactForm from "../components/ContactForm";
+
+export const metadata: Metadata = {
+  title: 'Contact Zeal Automotive | Get in Touch for Expert Car Repairs',
+  description: 'Need car repairs or maintenance? Contact Zeal Automotive today. Fill out our contact form to schedule an appointment with our experienced mechanics. Your trusted partner for automotive services.',
+  keywords: 'contact Zeal Automotive, car repairs, automotive maintenance, mechanic, schedule appointment, automotive services',
+}
 
 const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
 const karla = Karla({ preload: false })

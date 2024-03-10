@@ -47,6 +47,7 @@ const defaultFormData = {
 const ContactForm = ({ isModal }: { isModal?: boolean }) => {
     const [formData, setFormData] = useState(defaultFormData)
     const [isValid, setIsValid] = useState(false);
+    const [isSent, setIsSent] = useState(false);
     const [showErrors, setShowErrors] = useState(false);
     const [errors, setErrors] = useState<Record<string, string | undefined>>(defaultFormData)
     const pathname = usePathname();
@@ -58,6 +59,17 @@ const ContactForm = ({ isModal }: { isModal?: boolean }) => {
             </button>
         </Link>
     )
+
+    const submitForm = async () => {
+        await fetch("/api/send", {
+            method: "POST",
+            body: JSON.stringify(formData),
+        }).then(res => {
+            if (res.status == 200) {
+                setIsSent(true);
+            }
+        });
+    }
 
     const validateField = (name: string, value: string) => {
         let error = "";
@@ -149,8 +161,16 @@ const ContactForm = ({ isModal }: { isModal?: boolean }) => {
             return;
         } else {
             setShowErrors(false);
-            // submitForm();
+            submitForm();
         }
+    }
+
+    if (isSent) {
+        return (
+            <div className="flex w-full h-72">
+                Sent!
+            </div>
+        )
     }
 
     return (

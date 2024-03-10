@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Barlow_Semi_Condensed } from 'next/font/google'
 import { FaCircleCheck } from "react-icons/fa6";
 import blurbs from "./blurbs";
+import Image from 'next/image';
+import zealLogo from '../public/zeal-automotive-logo.png';
 
 const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
 
@@ -34,28 +36,38 @@ const SectionContainer = ({
 
 const InfoSection = () => {
   return (
-    <div className="w-full flex h-96 sm:h-72 bg-white text-black justify-center">
+    <div className="w-full flex h-96 sm:h-80 bg-white text-black justify-center">
       <div className={`flex flex-col justify-center items-center ${barlow.className} w-2/3 md:w-1/2`}>
-        <div className="mb-4 font-bold text-3xl">
+        <Image
+          src={zealLogo}
+          alt="Zeal Automotive Logo"
+          className="pb-4"
+          width={400}
+          height={48}
+          priority
+        />
+        <div className="mb-4 font-bold text-xl md:text-3xl">
           Your Local Automotive Specialist
         </div>
         <div className="text-center">
-          Located in Acworth GA, Zeal Automotive is your one-stop shop for automotive maintenance, paint protection, alignment, and performance enhancements in metro Atlanta Georgia.  We have a proven history providing quality services to the community to keep you on the road.  Our expertise -- combined with the best technologies -- ensures you reliability at competitive prices.
+          Located in <span className="font-bold">Acworth GA</span>, Zeal Automotive is your one-stop shop for automotive maintenance, paint protection, alignment, and performance enhancements in metro Atlanta Georgia.  We have a proven history providing quality services to the community to keep you on the road.  Our expertise -- combined with the best technologies -- ensures you reliability at competitive prices.
         </div>
       </div>
     </div>
   );
 }
 
-const ServiceBox = ({ className, text, subtext }: { className: string; text: string; subtext: string; }) => (
+const ServiceBox = ({ className, href, text, subtext }: { className: string; href: string; text: string; subtext: string; }) => (
   <div className="flex flex-col mx-8 w-full h-full py-8">
     <div className={`mb-4 h-full ${className}`} />
-    <div className="text-center text-2xl uppercase">
-      {text}
-    </div>
-    <div className="text-center text-md whitespace-nowrap">
-      {subtext}
-    </div>
+    <Link href={href}>
+      <div className="text-center text-2xl uppercase">
+        {text}
+      </div>
+      <div className="text-center text-md whitespace-nowrap">
+        {subtext}
+      </div>
+    </Link>
   </div>
 )
 
@@ -63,9 +75,9 @@ const ServicesSection = () => {
   return (
     <div className="w-full flex h-96 bg-zinc-600 justify-center">
       <div className={`flex flex-col md:flex-row h-full sm:w-full md:w-3/4 justify-center items-center ${barlow.className}`}>
-        <ServiceBox className="maintenance-image" text="Maintenance" subtext="All Makes and Models" />
-        <ServiceBox className="alignment-image" text="Wheel Alignment" subtext="In-house state of the art equipment" />
-        <ServiceBox className="performance-image" text="Performance" subtext="Upgrade your vehicle" />
+        <ServiceBox className="maintenance-image" href="/services#maintenance" text="Maintenance" subtext="All Makes and Models" />
+        <ServiceBox className="alignment-image" href="/services#alignment" text="Wheel Alignment" subtext="In-house state of the art equipment" />
+        <ServiceBox className="performance-image" href="/services#performance" text="Performance" subtext="Upgrade your vehicle" />
       </div>
     </div>
   )
@@ -76,7 +88,7 @@ const PPFSection = () => {
     <div className="w-full flex h-120 justify-center bg-gray-300 text-black">
       <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
         <div className="flex ppf-image w-full md:mr-8 h-full" />
-        <div className="flex flex-col w-full h-72 justify-center ml-8 md:m-0 items-center md:items-start">
+        <div className="flex flex-col w-full h-96 md:h-72 justify-center p-8 md:p-0 items-center md:items-start">
           <div className="text-2xl uppercase mb-4">Our Complete Paint Protection Services</div>
           <p className="mb-4">Transform your vehicle with our premier detailing and paint protection services.</p>
           <p className="">With an unprecedented level of care, our experienced technicians provide high-quality service to enhance your car&apos;s appearance inside and out. Our tailored services include <span className="font-bold">paint protection film, ceramic coatings, paint correction, and restoration details</span> to ensure a meticulous finish. Trust our expertise combined with our specialized equipment to deliver the ultimate aesthetic upgrade your vehicle deserves
@@ -100,7 +112,7 @@ const WhyChooseZealSection = () => {
 
   const BlurbRow = ({ children }: { children: React.ReactNode; }): JSX.Element => (
     <div className="flex w-full flex-col">
-      <div className="flex flex-row w-full">
+      <div className="flex flex-col md:flex-row w-full">
         {children}
       </div>
     </div>

@@ -1,6 +1,13 @@
+import { Metadata } from "next";
 import { FC } from "react"
 import { Barlow_Semi_Condensed, Karla } from 'next/font/google';
 import Map from '../components/Map';
+
+export const metadata: Metadata = {
+  title: 'About Zeal Automotive | Your Trusted Car Repair Experts',
+  description: 'Learn about Zeal Automotive - your trusted partner for car repairs and maintenance. Discover our commitment to excellence, experienced team, and dedication to customer satisfaction.',
+  keywords: 'Zeal Automotive, about us, car repair experts, automotive maintenance, experienced team, customer satisfaction',
+}
 
 const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
 const karla = Karla({ preload: false })
