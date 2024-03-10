@@ -17,7 +17,7 @@ export async function POST(payload: EmailPayload) {
   try {
     const data = await resend.emails.send({
       from: 'inquiry@zealautomotive.com',
-      to: ['downtownadambrown@gmail.com'], // ['zealautoz@gmail.com'],
+      to: ['zealautoz@gmail.com'],
       subject: 'Website Inquiry',
       react: EmailTemplate(payload),
       text: "text-test"
