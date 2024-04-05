@@ -118,6 +118,7 @@ export function BulkyFooter(): JSX.Element {
           height={24}
           priority
         />
+        <div className="h-12"/>
         <Image
           src={suntekLogo}
           alt="SunTek Logo"

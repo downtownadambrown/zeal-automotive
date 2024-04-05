@@ -85,10 +85,10 @@ const ServicesSection = () => {
 
 const PPFSection = () => {
   return (
-    <div className="w-full flex h-120 justify-center bg-gray-300 text-black">
+    <div className="w-full flex justify-center bg-gray-300 text-black">
       <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
-        <div className="flex ppf-image w-full md:mr-8 h-full" />
-        <div className="flex flex-col w-full h-96 md:h-72 justify-center p-8 md:p-0 items-center md:items-start">
+        <div className="flex ppf-image w-full md:mr-8 md:h-full" />
+        <div className="flex flex-col w-full justify-center p-8 md:p-0 items-center md:items-start">
           <div className="text-2xl uppercase mb-4">Our Complete Paint Protection Services</div>
           <p className="mb-4">Transform your vehicle with our premier detailing and paint protection services.</p>
           <p className="">With an unprecedented level of care, our experienced technicians provide high-quality service to enhance your car&apos;s appearance inside and out. Our tailored services include <span className="font-bold">paint protection film, ceramic coatings, paint correction, and restoration details</span> to ensure a meticulous finish. Trust our expertise combined with our specialized equipment to deliver the ultimate aesthetic upgrade your vehicle deserves
@@ -101,11 +101,11 @@ const PPFSection = () => {
 
 const WhyChooseZealSection = () => {
   const WhyZealBlurb = ({ title, description }: { title: string; description: string;}): JSX.Element => (
-    <div className="flex w-full h-full p-4">
+    <div className="flex w-full h-full p-2 md:p-4">
     <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="grey" size={24} /></div>
     <div className="w-3/4 flex flex-col">
-      <div className="flex w-full text-2xl uppercase">{title}</div>
-      <div className="flex w-full">{description}</div>
+      <div className="flex w-full text-xl md:text-2xl uppercase">{title}</div>
+      <div className="flex w-full text-sm md:text-md">{description}</div>
     </div>
   </div>
   )
@@ -119,9 +119,9 @@ const WhyChooseZealSection = () => {
   )
 
   return (
-    <div className="flex w-full justify-center bg-white text-black p-6">
-      <div className={`flex flex-col justify-center items-center ${barlow.className} w-3/4`}>
-        <div className="flex w-full justify-center text-3xl uppercase mb-6">
+    <div className="flex w-full justify-center bg-white text-black p-2 md:p-6">
+      <div className={`flex flex-col justify-center items-center ${barlow.className} w-full md:w-3/4`}>
+        <div className="flex w-full justify-center text-2xl md:text-3xl uppercase md:mb-6 text-center">
           Why Choose Zeal Automotive?
         </div>
         {blurbs.map((blurb, index) => {
