@@ -13,16 +13,16 @@ const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
 const karla = Karla({ preload: false })
 
 const ContactBox = ({ children, title }: { children: React.ReactNode; title: string }) => (
-  <div className="flex flex-row md:flex-col w-full md:w-1/4 sm:justify-between md:justify-start md:items-center px-24 md:px-0 pb-16 md:pb-0">
-    <div className="flex uppercase md:pb-4 sm:align-middle items-center md:justify-center pr-8 md:pr-0 w-1/2 md:w-full text-3xl md:text-2xl">{title}</div>
-    <div className="flex flex-col xs:w-1/2 md:w-full md:justify-center md:items-center text-2xl md:text-base">
+  <div className="flex flex-row md:flex-col w-full md:w-1/4 sm:justify-between md:justify-start md:items-center px-12 md:px-0 py-8 md:pb-0">
+    <div className="flex uppercase md:pb-4 sm:align-middle items-center md:justify-center pr-8 md:pr-0 w-1/2 md:w-full text-xl md:text-2xl">{title}:</div>
+    <div className="flex flex-col xs:w-1/2 md:w-full md:justify-center md:items-center text-xl md:text-base">
       {children}
     </div>
   </div>
 )
 
 const BlueContactSection = () => (
-  <div className="flex flex-col md:flex-row w-full justify-between bg-blue-500 text-white md:px-16 lg:px-16 py-8">
+  <div className="flex flex-col md:flex-row w-full justify-between bg-blue-500 text-white md:px-16">
     <ContactBox title="Address">
       <div>4948 Cobb Pkwy North</div>
       <div>Acworth, GA 30101</div>

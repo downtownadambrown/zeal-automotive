@@ -109,8 +109,8 @@ export function Footer(): JSX.Element {
 
 export function BulkyFooter(): JSX.Element {
   return (
-    <div className="flex flex-col md:flex-row w-full items-center bg-gray-300 justify-center py-8">
-      <div className="flex flex-row md:flex-col w-full md:w-1/4 items-center px-8 justify-center">
+    <div className="flex flex-col md:flex-row w-full items-center bg-gray-300 justify-center md:py-8">
+      <div className="flex flex-col w-full md:w-1/4 items-center px-8 justify-center py-8">
         <Image
           src={zealLogoBlack}
           alt="Zeal Automotive Logo"
@@ -127,7 +127,7 @@ export function BulkyFooter(): JSX.Element {
           priority
         />
       </div>
-      <div className="flex flex-col w-1/2 md:w-1/4 px-8">
+      <div className="flex flex-col w-100 md:w-1/4 px-8">
         <div className={`flex w-full text-xl text-gray-700 uppercase font-bold pb-0 md:pb-4 justify-center ${barlow.className}`}>Contact Us</div>
         <div className={`flex flex-col w-full text-md text-gray-700 ${karla.className}`}>
           <div className="flex flex-col w-full items-center">

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const OurServices = () => (
   <div className="w-full flex bg-white text-black justify-center py-8">
-    <div className={`flex flex-col justify-center items-center ${barlow.className} w-1/2`}>
+    <div className={`flex flex-col justify-center items-center ${barlow.className} w-full md:w-1/2`}>
       <div className="text-2xl uppercase">
         Zeal Automotive Services
       </div>
