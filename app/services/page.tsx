@@ -172,7 +172,6 @@ const PerformanceService = () => (
               <li className="pb-2">—Transmission Upgrades</li>
               <li className="pb-2">—Supercharger Kits</li>
               <li className="pb-2">—Turbocharger Kits</li>
-              <li className="pb-2">—Custom Fabrication</li>
               <li className="pb-2">—ECU Tuning</li>
             </ul>
           </div>
