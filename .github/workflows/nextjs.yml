@@ -53,6 +53,13 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Create .env file from GH secrets
+        run: |
+          touch .env.local
+          echo NEXT_PUBLIC_GMAPS_KEY=${{ secrets.NEXT_PUBLIC_GMAPS_KEY }} >> .env.local
+          echo NEXT_PUBLIC_RESEND_KEY=${{ secrets.NEXT_PUBLIC_RESEND_KEY }} >> .env.local
+          echo "Success"
+          cat .env.local 
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
