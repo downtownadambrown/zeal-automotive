@@ -85,7 +85,7 @@ const ServicesSection = () => {
 
 const PPFSection = () => {
   return (
-    <div className="w-full flex justify-center bg-gray-300 text-black">
+    <div className="w-full flex justify-center bg-gray-300 text-black p-4">
       <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
         <div className="flex ppf-image w-full md:mr-8 md:h-full" />
         <div className="flex flex-col w-full justify-center p-8 md:p-0 items-center md:items-start">
