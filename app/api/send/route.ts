@@ -20,7 +20,7 @@ export async function POST(payload: EmailPayload) {
       to: ['zealautoz@gmail.com'],
       subject: 'Website Inquiry',
       react: EmailTemplate(payload),
-      text: "text-test"
+      text: "text-test",
     });
 
     return Response.json(data);
