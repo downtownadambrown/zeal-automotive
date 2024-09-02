@@ -115,8 +115,7 @@ const ContactForm = ({ isModal }: { isModal?: boolean }) => {
                         error = "Invalid mileage entered."
                     }
                 } else {
-                    setIsValid(false);
-                    error = "Invalid mileage entered."
+                    setIsValid(true);
                 }
                 setErrors({
                     ...errors,
