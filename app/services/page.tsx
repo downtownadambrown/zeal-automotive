@@ -95,35 +95,35 @@ const GetAQuote = () => (
 
 const CeramicCoatingService = () => (
   <div id="ceramic" className="w-full flex bg-gray-300 text-black justify-center">
-  <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
-    <div className="ceramic-corvette-image h-96 md:h-72 w-full md:w-1/2" />
-    <div className="flex flex-col w-full md:w-1/2 items-center py-8">
-      <div className="text-2xl uppercase pb-8">
+    <div className={`flex flex-col md:flex-row justify-center items-center ${barlow.className} w-full`}>
+      <div className="ceramic-corvette-image h-96 md:h-72 w-full md:w-1/2" />
+      <div className="flex flex-col w-full md:w-1/2 items-center py-8">
+        <div className="text-2xl uppercase pb-8">
         Ceramic Coating
-      </div>
-      <div className="flex flex-row w-full justify-center">
-        <div className="pr-8">
-          <ul>
-            <li className="pb-2">—Oil Changes</li>
-            <li className="pb-2">—Tire Rotations</li>
-            <li className="pb-2">—Brakes</li>
-            <li className="pb-2">—Emissions Systems</li>
-            <li className="pb-2">—Air Conditioning and Heat</li>
-          </ul>
         </div>
-        <div className="">
-          <ul>
-            <li className="pb-2">—Transmissions</li>
-            <li className="pb-2">—Engine Repair and Rebuilding</li>
-            <li className="pb-2">—Cooling Systems</li>
-            <li className="pb-2">—Electrical</li>
-            <li className="pb-2">—Interior Repair</li>
-          </ul>
+        <div className="flex flex-row w-full justify-center">
+          <div className="pr-8">
+            <ul>
+              <li className="pb-2">—Oil Changes</li>
+              <li className="pb-2">—Tire Rotations</li>
+              <li className="pb-2">—Brakes</li>
+              <li className="pb-2">—Emissions Systems</li>
+              <li className="pb-2">—Air Conditioning and Heat</li>
+            </ul>
+          </div>
+          <div className="">
+            <ul>
+              <li className="pb-2">—Transmissions</li>
+              <li className="pb-2">—Engine Repair and Rebuilding</li>
+              <li className="pb-2">—Cooling Systems</li>
+              <li className="pb-2">—Electrical</li>
+              <li className="pb-2">—Interior Repair</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 );
 
 const PPFService = () => (

@@ -102,12 +102,12 @@ const PPFSection = () => {
 const WhyChooseZealSection = () => {
   const WhyZealBlurb = ({ title, description }: { title: string; description: string;}): JSX.Element => (
     <div className="flex w-full h-full p-2 md:p-4">
-    <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="grey" size={24} /></div>
-    <div className="w-3/4 flex flex-col">
-      <div className="flex w-full text-xl md:text-2xl uppercase">{title}</div>
-      <div className="flex w-full text-sm md:text-md">{description}</div>
+      <div className="w-1/4 flex justify-center mt-1"><FaCircleCheck color="grey" size={24} /></div>
+      <div className="w-3/4 flex flex-col">
+        <div className="flex w-full text-xl md:text-2xl uppercase">{title}</div>
+        <div className="flex w-full text-sm md:text-md">{description}</div>
+      </div>
     </div>
-  </div>
   )
 
   const BlurbRow = ({ children }: { children: React.ReactNode; }): JSX.Element => (
