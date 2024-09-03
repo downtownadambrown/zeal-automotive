@@ -21,7 +21,16 @@ export async function POST(req: NextRequest) {
     to: ['zealautoz@gmail.com'],
     subject: 'Website Inquiry',
     react: EmailTemplate(body),
-    text: body,
+    text: `
+      Inquiry from ZealAutomotive.com - Contact Form\n\n
+      Name: ${body.name}\n
+      Email: ${body.email}\n
+      Phone: ${body.phone}\n
+      Make: ${body.make}\n
+      Model: ${body.model}\n
+      Mileage: ${body.mileage}\n
+      Info: ${body.info}
+    `,
   });
 
   if (error) {
