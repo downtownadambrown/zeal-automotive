@@ -163,7 +163,7 @@ const ContactForm = ({ isModal }: { isModal?: boolean }) => {
         }
     }
 
-    if (!isSent) {
+    if (isSent) {
         return (
             <div className="flex w-full h-72 items-center justify-center flex-col">
                 <span className="text-3xl">Sent</span>
