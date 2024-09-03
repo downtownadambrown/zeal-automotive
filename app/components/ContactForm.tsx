@@ -2,8 +2,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Resend } from 'resend';
-import { EmailTemplate } from "./EmailTemplate";
+import { FaCircleCheck } from "react-icons/fa6";
 
 const InputField = ({ className, type, label, name, value, onChange, big, error, showErrors }: { className?: string; type?: string; label: string; name?: string; value: number | string; onChange: (e: React.SyntheticEvent) => void; big?: boolean; error?: string; showErrors: boolean }) => {
     if (big) {
@@ -164,10 +163,11 @@ const ContactForm = ({ isModal }: { isModal?: boolean }) => {
         }
     }
 
-    if (isSent) {
+    if (!isSent) {
         return (
-            <div className="flex w-full h-72">
-                Sent!
+            <div className="flex w-full h-72 items-center justify-center flex-col">
+                <span className="text-3xl">Sent</span>
+                <FaCircleCheck color="green" size="40" />
             </div>
         )
     }
