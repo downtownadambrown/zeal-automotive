@@ -99,25 +99,24 @@ const CeramicCoatingService = () => (
       <div className="ceramic-corvette-image h-96 md:h-72 w-full md:w-1/2" />
       <div className="flex flex-col w-full md:w-1/2 items-center py-8">
         <div className="text-2xl uppercase pb-8">
-        Ceramic Coating
+          Detailing
         </div>
         <div className="flex flex-row w-full justify-center">
           <div className="pr-8">
             <ul>
-              <li className="pb-2">—Oil Changes</li>
-              <li className="pb-2">—Tire Rotations</li>
-              <li className="pb-2">—Brakes</li>
-              <li className="pb-2">—Emissions Systems</li>
-              <li className="pb-2">—Air Conditioning and Heat</li>
+              <li className="pb-2">—Paint Corrections</li>
+              <li className="pb-2">—Interior Detailing</li>
+              <li className="pb-2">—Stain Removal</li>
+              <li className="pb-2">—Odor Removal</li>
+              <li className="pb-2">—Iron Decontamination</li>
             </ul>
           </div>
           <div className="">
             <ul>
-              <li className="pb-2">—Transmissions</li>
-              <li className="pb-2">—Engine Repair and Rebuilding</li>
-              <li className="pb-2">—Cooling Systems</li>
-              <li className="pb-2">—Electrical</li>
-              <li className="pb-2">—Interior Repair</li>
+              <li className="pb-2">—Polishing</li>
+              <li className="pb-2">—Waxing</li>
+              <li className="pb-2">—Exterior Detailing</li>
+              <li className="pb-2">—Ceramic Coating</li>
             </ul>
           </div>
         </div>
@@ -136,10 +135,10 @@ const PPFService = () => (
         <div className="flex flex-row w-full justify-center">
           <div className="">
             <ul>
-              <li className="pb-2">—In-house digital alignment technology</li>
-              <li className="pb-2">—Excellent turnaround time</li>
-              <li className="pb-2">—Specialized technicians</li>
-              <li className="">—Best in the industry</li>
+              <li className="pb-2">—Color Change Film</li>
+              <li className="pb-2">—Stealth Film</li>
+              <li className="pb-2">—Protection Packages</li>
+              <li className="pb-2">—Best overall Protection for your paint</li>
             </ul>
           </div>
         </div>

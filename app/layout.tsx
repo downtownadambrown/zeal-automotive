@@ -3,21 +3,22 @@ import Image from 'next/image';
 import { Barlow_Semi_Condensed, Karla } from 'next/font/google';
 import './globals.css';
 import zealLogo from '../public/zeal-automotive-logo.png';
-import zealLogoBlack from '../public/zeal-automotive-logo-black.png'
-import suntekLogo from '../public/suntek-logo.png'
+import zealLogoBlack from '../public/zeal-automotive-logo-black.png';
+import suntekLogo from '../public/suntek-logo.png';
+import traxxasLogo from '../public/traxxas-logo.png';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 
-import Link from 'next/link'
+import Link from 'next/link';
 import LinkedListItem from './components/LinkedListItem';
 import Modal from './components/Modal';
 
-const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false })
-const karla = Karla({ preload: false })
+const barlow = Barlow_Semi_Condensed({ weight: "500", preload: false });
+const karla = Karla({ preload: false });
 
 export const metadata: Metadata = {
   title: 'Zeal Automotive | Your Local Automotive Repair Alignments and Service | Acworth, Georgia',
   description: 'Get reliable automotive repair services in Acworth, Georgia at Zeal Automotive. Our experienced mechanics offer expert solutions for all your car repair needs. Call us today!',
-}
+};
 
 export function NotificationSection(): JSX.Element {
   return (
@@ -31,23 +32,23 @@ export function NotificationSection(): JSX.Element {
           </a>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-evenly w-72 md:w-36 my-1">
-        <Link className="hover-black" href="https://www.facebook.com/ZealAutoz/">      
+      <div className="flex flex-row items-center justify-end w-72 md:w-36 my-1">
+        <Link className="hover-black pr-4" href="https://www.facebook.com/ZealAutoz/">      
           <FaFacebookF />
         </Link>
         <Link className="hover-black" href="https://www.instagram.com/zeal_automotive/">
           <FaInstagram />
         </Link>
-        <Link className="hover-black" href="#">
+        {/*<Link className="hover-black" href="#">
           <FaYoutube />
         </Link>
         <Link className="hover-black" href="#">
           <FaLinkedin />
-        </Link>        
+        </Link>*/}
       </div>
     </div>
   )
-}
+};
 
 export function Header(): JSX.Element {
   return (
@@ -94,7 +95,7 @@ export function Header(): JSX.Element {
       </div>
     </header>
   )
-}
+};
 
 export function Footer(): JSX.Element {
   const year = new Date().getFullYear()
@@ -105,11 +106,11 @@ export function Footer(): JSX.Element {
       </>
     </footer>
   );
-}
+};
 
 export function BulkyFooter(): JSX.Element {
   return (
-    <div className="flex flex-col md:flex-row w-full items-center bg-gray-300 justify-center md:py-8">
+    <div className="flex flex-col md:flex-row w-full items-center bg-gray-300 justify-center">
       <div className="flex flex-col w-full md:w-1/4 items-center px-8 justify-center py-8">
         <Image
           src={zealLogoBlack}
@@ -122,6 +123,14 @@ export function BulkyFooter(): JSX.Element {
         <Image
           src={suntekLogo}
           alt="SunTek Logo"
+          width={200}
+          height={24}
+          priority
+        />
+        <div className="h-12"/>
+        <Image
+          src={traxxasLogo}
+          alt="Traxxas Logo"
           width={200}
           height={24}
           priority
@@ -200,7 +209,7 @@ export function BulkyFooter(): JSX.Element {
       </div>
     </div>
   )
-}
+};
 
 export default function RootLayout({
   children,
@@ -218,4 +227,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-}
+};
